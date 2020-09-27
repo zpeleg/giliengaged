@@ -90,7 +90,7 @@ canvas{
               let g = Math.floor(spark.green * fade);
               let b = Math.floor(spark.blue * fade);
               context.beginPath();
-              context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',1)';
+              context.fillStyle = 'rgba(' + r + ',' + g + ',' + b + ',0.6)';
               context.rect(x, y, 4, 4);
               context.fill();
             }
@@ -103,7 +103,7 @@ canvas{
           firework.y = firework.y - 10;
           for (let spark = 0; spark < 15; spark++) {
             context.beginPath();
-            context.fillStyle = 'rgba(' + index * 50 + ',' + spark * 17 + ',0,1)';
+            context.fillStyle = 'rgba(' + index * 50 + ',' + spark * 17 + ',0,0.8)';
             context.rect(firework.x + Math.random() * spark - spark / 2, firework.y + spark * 4, 4, 4);
             context.fill();
           }
